@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us - Travel Agency</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- CRITICAL: Material Symbols Link -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#196ee6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111821",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0e131b] dark:text-slate-50 font-display antialiased overflow-x-hidden">
+<div class="relative flex flex-col min-h-screen w-full">
+<!-- Navigation -->
+<div class="w-full bg-white dark:bg-[#111821] border-b border-[#e7ecf3] dark:border-slate-800 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-10 py-3">
+<header class="flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-4 text-[#0e131b] dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+</div>
+<h2 class="text-[#0e131b] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Travel Agency</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-[#0e131b] dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">About Us</a>
+<a class="text-[#0e131b] dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="packages.html">Packages</a>
+<a class="text-[#0e131b] dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="contact.html">Contact</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-blue-700 transition-colors text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+<!-- Mobile Menu Icon (Placeholder) -->
+<div class="md:hidden text-[#0e131b] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="w-full">
+<div class="relative w-full h-[500px] flex items-center justify-center bg-cover bg-center" data-alt="Stunning aerial view of a tropical coastline with turquoise water and white sand" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnlimaH6U2V2hQtUaNGtX27NFoZE4Ypbbn72xoHNfEeMB7hlIdZ-ptM-hYBMHXs8AxPiCRABjMFWUunV3T-rSeLedIE7q4xLFrJxZ00Nx6HmbB0TIoXaLI7h9yJ0OYCc--KQGVVpUPQil_ohstkLOkGmepRHAiJR3L1oLzjQg2AGrreGBMaHXQIci-qJbyxMKj_CaBgpg6qpZI1jwZ0HKi86Yoj2_S8Jr_U26OyCQ5Q0nMJJIoK5mUBl883a95u7_Ss3fTGZ6CGUro");'>
+<div class="flex flex-col gap-6 text-center max-w-[800px] px-4 animate-fade-in-up">
+<h1 class="text-white text-5xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                        Exploration Made Simple.
+                    </h1>
+<h2 class="text-slate-200 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto">
+                        We bridge the gap between your dream destinations and reality with seamless planning and 24/7 support.
+                    </h2>
+<div class="pt-4">
+<button class="inline-flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-blue-600 transition-all text-slate-50 text-base font-bold shadow-lg hover:shadow-xl">
+                            Start Your Journey
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Our Story Section -->
+<div class="w-full py-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-[960px] mx-auto px-4 md:px-10 flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1 flex flex-col gap-6">
+<div class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold w-fit">
+                        Who We Are
+                    </div>
+<h2 class="text-[#0e131b] dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight">
+                        Our Story
+                    </h2>
+<p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                        Founded with the mission to minimize travel hassle, we believe exploring the world should be as relaxing as the destination itself. 
+                        <br/><br/>
+                        We started as a small group of passionate travelers tired of complicated booking processes and hidden fees. Today, we are a dedicated team committed to making your journey seamless, from the first click to your safe return home.
+                    </p>
+<div class="flex gap-8 pt-4">
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-primary">10k+</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Happy Travelers</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-primary">50+</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Destinations</span>
+</div>
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-primary">24/7</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Support</span>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full h-full min-h-[400px]">
+<div class="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+<img alt="Travel Experience" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Traveler standing on top of a vehicle looking at a desert landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcpIxQ_HN9tokdZVa98Sc0A-Qoo7jhxQYfeqD37FUeS2gp629LaIiTRhzpXrQbGuOUGk5bbk2BZFKo6_AqkLTMA2vQ3NNAklcBbPjoT0Ec7SAUNGDI86EQp-jbj-O8QGeocupIkZ6a85PZn6iGGif-m9JAsmvNp7CzX3cNzac0I7jkOSiTjRwdWvUCuxBVyBQJ-4vD2DZcmeICErqlRZSZdYLuWs1Jab3Yd71vXuPvStgoTYz9NYxyQ0JqXbEdKOwfQizpDBjTCNaP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Values Section -->
+<div class="w-full py-20 bg-white dark:bg-[#161e2a] border-y border-[#e7ecf3] dark:border-slate-800">
+<div class="max-w-[960px] mx-auto px-4 md:px-10">
+<div class="flex flex-col gap-12">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="text-[#0e131b] dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight">
+                            Our Core Values
+                        </h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-[600px]">
+                            What drives us to deliver the best experiences for you, every single time.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="flex flex-col gap-5 p-8 rounded-xl bg-background-light dark:bg-[#1e2736] border border-transparent hover:border-primary/20 transition-all duration-300">
+<div class="size-14 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">visibility</span>
+</div>
+<div>
+<h3 class="text-[#0e131b] dark:text-white text-xl font-bold mb-2">Transparency</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                                    No hidden fees, ever. What you see is exactly what you pay. We believe in honest pricing.
+                                </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-5 p-8 rounded-xl bg-background-light dark:bg-[#1e2736] border border-transparent hover:border-primary/20 transition-all duration-300">
+<div class="size-14 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">touch_app</span>
+</div>
+<div>
+<h3 class="text-[#0e131b] dark:text-white text-xl font-bold mb-2">Simplicity</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                                    Our optimized 3-click booking process makes planning effortless so you can focus on the trip.
+                                </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-5 p-8 rounded-xl bg-background-light dark:bg-[#1e2736] border border-transparent hover:border-primary/20 transition-all duration-300">
+<div class="size-14 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div>
+<h3 class="text-[#0e131b] dark:text-white text-xl font-bold mb-2">Reliability</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                                    We are here for you 24/7. From lost luggage to flight changes, we've got your back globally.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Section -->
+<div class="w-full py-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-[960px] mx-auto px-4 md:px-10">
+<div class="flex flex-col gap-4 mb-12">
+<h2 class="text-[#0e131b] dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight">
+                        Meet the Explorers
+                    </h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">
+                        The passionate team making your dream vacations a reality.
+                    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Team Member 1 -->
+<div class="flex flex-col gap-3 group">
+<div class="overflow-hidden rounded-xl aspect-[4/5] bg-slate-200">
+<img alt="Sarah Jenkins" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Portrait of Sarah Jenkins, CEO, smiling professionally in an office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC01yIUvklIRFaWx9P48gRoqbBEKO8xi11_a8519O7gPk5FCsr6Xy4e15SAibu6I0NGWXY1A668ntrOUg5KeMDKXBLPNISubqVi62-bXoB9VSiQzRSqibBZzkYdb-8CpLC7Lc5G0cIVJmN4Lon-zDDN-7vE8I-LQilm49UMmvnzQvdsBXe68J56MhC5gVQipQUANsIGh2Lbbs1KOmtm02dWQJLmnKmXRvyC8_quNiUSkd9FSuabMdjB007x1qDrgFfe5ulRHhsVp-Fm"/>
+</div>
+<div>
+<h3 class="text-[#0e131b] dark:text-white text-lg font-bold">Sarah Jenkins</h3>
+<p class="text-primary text-sm font-medium">Founder &amp; CEO</p>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="flex flex-col gap-3 group">
+<div class="overflow-hidden rounded-xl aspect-[4/5] bg-slate-200">
+<img alt="David Chen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Portrait of David Chen, Head of Operations, wearing a suit and smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBci5QXA5oQ66YgBLCEKOsUuPp1ytckjrMUV9d4YZu2j6MBd5owJeJ6XKKlzQjnpCfKacKWfQhCjfrlvZTXiwmaZFUjWWIWjNmuOcbgV_34r5OESSSmlkolD8LDuWcYrZ5Noz81YplfMlw50ac9-g62Jq2NSREPpKYKI_yayjs5Q82k3e3YIANvpBki9FpmoKO7KyFKwC8yF2Qjm4Js22nGQT1DAQJi7Afr2X-4zPebFJIdeFARzlNCZy2vZVWLUeDX61oGuwhVl1Zp"/>
+</div>
+<div>
+<h3 class="text-[#0e131b] dark:text-white text-lg font-bold">David Chen</h3>
+<p class="text-primary text-sm font-medium">Head of Operations</p>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="flex flex-col gap-3 group">
+<div class="overflow-hidden rounded-xl aspect-[4/5] bg-slate-200">
+<img alt="Elena Rodriguez" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Portrait of Elena Rodriguez, Travel Specialist, smiling warmly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuG9k-PEBYdMvr-7fChoFZ-uk2OyQGIUIicpNLPHlrUaNQkZgvwEvH4bWWSZmslDCO4BERF45UbHAl09jm1515C3H3qR7v394oGJsw_S2S6mdi6jPa6yFWyf1rLhKLAcnjnl-TeeqCeSFXnvC2hvAeuGXcXbtkR2bpsHNUcBIVi3l-nj1gxIrfcbt0qEdVxVljXiW_S61N4UR4f44niuIV5rWM91HG_7ZFEQMzVTqxlvRgCRTyu2qgZYOE76FhbhSxVfA623zLyFoy"/>
+</div>
+<div>
+<h3 class="text-[#0e131b] dark:text-white text-lg font-bold">Elena Rodriguez</h3>
+<p class="text-primary text-sm font-medium">Senior Travel Specialist</p>
+</div>
+</div>
+<!-- Team Member 4 -->
+<div class="flex flex-col gap-3 group">
+<div class="overflow-hidden rounded-xl aspect-[4/5] bg-slate-200">
+<img alt="Marcus Johnson" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Portrait of Marcus Johnson, Customer Success Lead, looking approachable" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_5FhJeiBvEkJRkDqlvgKEZ12GL2tzil36Mwr1SmagyGjNXHP8meHyepGf9aa0qKMttQpZLr2ywIf54hZlgBXAQlNKF_l79E0dH3Bft2RhT6e2ev1SDQKPXJuES7NlRGN-ENxNzR0Py0H2Gw4RkxhBzQ6LRfU5h0pRUnlQltxGOEE4MIstuXNzWstiEEodYP52eDyYS0FZRFI2bsPHlA5YuJvU2Od0hsEzrl4BP8qNHltn5GpGzfOI_WOjlfN5NMfDG_gOwLdXdo1N"/>
+</div>
+<div>
+<h3 class="text-[#0e131b] dark:text-white text-lg font-bold">Marcus Johnson</h3>
+<p class="text-primary text-sm font-medium">Customer Success Lead</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="w-full py-16 px-4">
+<div class="max-w-5xl mx-auto bg-primary rounded-2xl overflow-hidden relative shadow-2xl">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none"></div>
+<div class="relative z-10 px-6 py-16 md:px-16 text-center flex flex-col items-center gap-6">
+<h2 class="text-white text-3xl md:text-5xl font-black tracking-tight leading-tight">
+                        Ready to start your adventure?
+                    </h2>
+<p class="text-blue-100 text-lg md:text-xl max-w-2xl font-medium">
+                        Browse our curated list of top-rated packages and book your dream getaway in minutes.
+                    </p>
+<div class="flex gap-4 mt-2">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-white hover:bg-slate-50 text-primary text-base font-bold shadow-md transition-colors">
+                            View Packages
+                        </button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-blue-700 hover:bg-blue-800 text-white text-base font-bold shadow-md transition-colors border border-blue-600">
+                            Contact Us
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#111821] border-t border-[#e7ecf3] dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-[960px] mx-auto px-4 md:px-10">
+<div class="flex flex-col md:flex-row justify-between gap-10 mb-12">
+<div class="flex flex-col gap-4 max-w-[300px]">
+<div class="flex items-center gap-2 text-[#0e131b] dark:text-white">
+<span class="material-symbols-outlined text-primary text-2xl">flight_takeoff</span>
+<span class="text-xl font-bold">Travel Agency</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            Making travel simple, reliable, and transparent for everyone. Explore the world with confidence.
+                        </p>
+</div>
+<div class="flex gap-16 flex-wrap">
+<div class="flex flex-col gap-4">
+<h4 class="text-[#0e131b] dark:text-white font-bold">Company</h4>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">About Us</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Careers</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Blog</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#0e131b] dark:text-white font-bold">Support</h4>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Help Center</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#0e131b] dark:text-white font-bold">Contact</h4>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[16px]">mail</span> hello@agency.com
+                                </a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[16px]">call</span> +1 (555) 123-4567
+                                </a>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-[#e7ecf3] dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-400 text-sm">© 2024 Travel Agency Inc. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-primary" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travel Agency - Discover the World</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#196ee6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111821",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-50 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md px-10 py-3">
+<div class="mx-auto flex max-w-[960px] items-center justify-between">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">travel_explore</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Travel Agency</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden items-center gap-9 md:flex">
+<a class="text-sm font-medium leading-normal text-slate-900 hover:text-primary dark:text-slate-200 dark:hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-sm font-medium leading-normal text-slate-900 hover:text-primary dark:text-slate-200 dark:hover:text-primary transition-colors" href="tour.html">Tours</a>
+<a class="text-sm font-medium leading-normal text-slate-900 hover:text-primary dark:text-slate-200 dark:hover:text-primary transition-colors" href="about.html">About</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Contact Us</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full px-4 py-12 md:px-10 lg:py-20 flex justify-center bg-white dark:bg-slate-900/50">
+<div class="max-w-[960px] w-full">
+<div class="@container">
+<div class="flex flex-col gap-8 px-4 py-4 @[864px]:flex-row @[864px]:items-center">
+<!-- Hero Image -->
+<div class="w-full @[864px]:w-1/2 order-1 @[864px]:order-2">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl shadow-lg" data-alt="Serene mountain landscape with a clear lake and blue sky" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFGU3xHASABDyf-2bgtwc_YyiIOmACCTwDs3Ranfh2k6nle7f_8ccnYP6JLd-9splAfUUVItBJaEsMpUXkUeuj8BhXAQXLyAHWfpfZn-Kh8uqiryikcT4y3UUOZEcuKj3z3Bh9teFHm9KO2eQAWbjNoawfEQG6h8X97Y3a6X6ig5Lz4chEdUqkFR6QaLviH1FJ0LuG6Qx8cUIaXmOYBjkHGfYuchUnSKsG2lJx9VFhoVeO1eNTAmxTDNdcZaNk6ksclPkH19wVvw82");'>
+</div>
+</div>
+<!-- Hero Text -->
+<div class="flex flex-col gap-6 @[864px]:w-1/2 order-2 @[864px]:order-1">
+<div class="flex flex-col gap-4 text-left">
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
+                                        Discover the World's Hidden Gems
+                                    </h1>
+<h2 class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed">
+                                        Premium tours curated for the modern traveler. Experience the unforgettable with our expert guides and seamless booking process.
+                                    </h2>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 text-white text-base font-bold transition-colors">
+<span class="truncate" >View Tours</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white text-base font-bold transition-colors">
+<span class="truncate">Enquire Now</span>
+</button>
+</div>
+<!-- Mini Trust Strip -->
+<div class="mt-4 flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span>Verified Guides</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">savings</span>
+<span>Best Price</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="w-full px-4 py-12 flex justify-center bg-background-light dark:bg-background-dark">
+<div class="max-w-[960px] w-full px-4">
+<div class="mb-10">
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight">Why Choose Us?</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-2">We make travel simple, safe, and memorable.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Easy Booking</h3>
+<p class="text-slate-500 dark:text-slate-400 mt-2 text-sm leading-relaxed">Book your dream vacation in just a few clicks with our streamlined platform.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">groups</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Expert Guides</h3>
+<p class="text-slate-500 dark:text-slate-400 mt-2 text-sm leading-relaxed">Our local experts ensure you see the authentic side of every destination.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">support_agent</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">24/7 Support</h3>
+<p class="text-slate-500 dark:text-slate-400 mt-2 text-sm leading-relaxed">We are here for you around the clock, wherever you are in the world.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Destinations -->
+<section class="w-full px-4 py-12 pb-20 flex justify-center bg-white dark:bg-slate-900/50">
+<div class="max-w-[960px] w-full px-4">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Trending Destinations</h2>
+<a class="text-primary font-bold text-sm hover:underline flex items-center gap-1" href="#">
+                            View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group flex flex-col gap-3 pb-3 cursor-pointer">
+<div class="w-full aspect-[4/3] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-700">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Tropical beach with turquoise water and cliffs in Bali" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWXC_a8FBzvLObLJz1zP7ZKYIevcN7SoUG873kopUV0leI8baNpB_P7E7bbD8LY3Odob1d1q8xISR79G49dW75MI9XiiHhptkNoaWdmX_YpZGB5AffK4cat2BZ_NEkt3tLPt3yPOfqEaGdlSsdh72DDDB0xbaXXV5SEBtqOJF1qj2rFxhPUo6FajaTVGdONpkhTLLPbfGntVZoAkPb8_JGcWv2qLh1m0FlLtKbkbCbaWV_jgs4a7kJT0VwG4GDugtCIPVQeBzDxyP0");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-normal group-hover:text-primary transition-colors">Bali Escape</p>
+<span class="flex items-center gap-1 text-xs font-bold text-amber-500 bg-amber-100 dark:bg-amber-900/30 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.9
+                                    </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">5 Days • All Inclusive</p>
+<p class="text-primary font-bold mt-1 text-base">$899 <span class="text-xs font-normal text-slate-400">/ person</span></p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col gap-3 pb-3 cursor-pointer">
+<div class="w-full aspect-[4/3] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-700">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Snow covered peaks of the Swiss Alps during daytime" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB42-ANuhU0eP83_K1aEGfzBbw-S3qkVUVwSDmKBEYWB-5WAnBsYqY9LOB8Oo56lFDRDqbpfvVgSrsL_Do_oFxCXMeHu6ONqvqlrYvEqeokCkGMl8Ki6x5ea06nPfjNHnj6lPt2tgaur3_QxqvVQ8zDkEKmy7Ox-LG4jLqRgZgTWjsYLYL5_yB9h6lubz_gnK81mjRFT_xYG-1NjSC3sT-1AxZSw_ZbL4CNZ8GvuTx0Q6GyyK4TQDi0JVQcPbSE0yMdzJUvD7mSaUxO");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-normal group-hover:text-primary transition-colors">Swiss Alps</p>
+<span class="flex items-center gap-1 text-xs font-bold text-amber-500 bg-amber-100 dark:bg-amber-900/30 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.8
+                                    </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">7 Days • Hiking &amp; Skiing</p>
+<p class="text-primary font-bold mt-1 text-base">$1200 <span class="text-xs font-normal text-slate-400">/ person</span></p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col gap-3 pb-3 cursor-pointer">
+<div class="w-full aspect-[4/3] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-700">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Historic Kyoto street with traditional architecture and red lanterns" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLI4Ey4TC5KttLcFn54iCeWdpCjRpAdulhNxgwX62QEe4LPjr-fkQxdgPFYLvFmGGYpb8xJEQtJHkG444A1GxcTsveh_HCqyjTveq0XFKFj02rLfU4agxz4P9hEOq8Ek7jCneVMTXqd0lc2ukUi_bfLfx_Zx31HRVtZYe0S18UWD3ulnhswGxB7bwFAItjvdnFXvk4P_P1C7HSj_tnhcSKVeifukp3YXV5SH5-tgRVepcbw1TUn5uzlZjyb2Jb6YxhGkT62zyPhQeP");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-normal group-hover:text-primary transition-colors">Kyoto Culture</p>
+<span class="flex items-center gap-1 text-xs font-bold text-amber-500 bg-amber-100 dark:bg-amber-900/30 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">star</span> 5.0
+                                    </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">6 Days • City Tour</p>
+<p class="text-primary font-bold mt-1 text-base">$1050 <span class="text-xs font-normal text-slate-400">/ person</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark py-10 px-10 flex justify-center">
+<div class="max-w-[960px] w-full flex flex-col md:flex-row justify-between gap-10">
+<div class="flex flex-col gap-4 max-w-xs">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-primary text-2xl">travel_explore</span>
+<h2 class="text-lg font-bold">Travel Agency</h2>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                        Making the world accessible one trip at a time. Join us to explore hidden gems and iconic landmarks.
+                    </p>
+</div>
+<div class="flex gap-16 flex-wrap">
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Company</h4>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">Careers</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">Blog</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Support</h4>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">Help Center</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Social</h4>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.407-.06 4.123-.06h.08v.001zm0-2c-2.72 0-3.058.01-4.126.06-1.17.054-1.972.26-2.673.533a6.904 6.904 0 00-2.518 1.637 6.904 6.904 0 00-1.637 2.518c-.273.701-.479 1.503-.533 2.673C.81 7.257.8 7.595.8 10.315v.63c0 2.72.01 3.058.06 4.126.054 1.17.26 1.972.533 2.673a6.904 6.904 0 001.637 2.518 6.904 6.904 0 002.518 1.637c.701.273 1.503.479 2.673.533 1.068.05 1.406.06 4.126.06h.63c2.72 0 3.058-.01 4.126-.06 1.17-.054 1.972-.26 2.673-.533a6.904 6.904 0 002.518-1.637 6.904 6.904 0 001.637-2.518c.273-.701.479-1.503.533-2.673.05-1.068.06-1.406.06-4.126v-.63c0-2.72-.01-3.058-.06-4.126-.054-1.17-.26-1.972-.533-2.673a6.904 6.904 0 00-1.637-2.518 6.904 6.904 0 00-2.518-1.637c-.701-.273-1.503-.479-2.673-.533C15.373 2.01 15.035 2 12.315 2h-.63V0zm0 5.838a4.477 4.477 0 100 8.954 4.477 4.477 0 000-8.954zm0 6.954a2.477 2.477 0 110-4.954 2.477 2.477 0 010 4.954zm5.334-7.554a1.066 1.066 0 110 2.132 1.066 1.066 0 010-2.132z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

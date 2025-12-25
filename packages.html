@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travel Agency - Tours &amp; Packages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#196ee6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111821",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .card-hover-effect {
+            transition: all 0.3s ease;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="flex min-h-screen flex-col bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-50 antialiased overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full bg-slate-50/80 dark:bg-[#111821]/80 backdrop-blur-md border-b border-solid border-[#e7ecf3] dark:border-slate-800">
+<div class="px-6 lg:px-40 flex justify-center w-full">
+<div class="flex max-w-[1280px] w-full items-center justify-between py-3">
+<div class="flex items-center gap-4 text-[#0e131b] dark:text-white">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">travel_explore</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Travel Agency</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-9">
+<a class="text-[#0e131b] dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-primary text-sm font-bold" href="#">Packages</a>
+<a class="text-[#0e131b] dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="about.html">About Us</a>
+<a class="text-[#0e131b] dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold hover:bg-blue-600 transition-colors shadow-sm">
+<span>Sign In</span>
+</button>
+</nav>
+<div class="md:hidden">
+<button class="p-2 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="w-full bg-white dark:bg-[#161e2b] border-b border-[#e7ecf3] dark:border-slate-800">
+<div class="px-6 lg:px-40 flex justify-center py-10 lg:py-16">
+<div class="flex flex-col max-w-[960px] w-full items-center text-center gap-6">
+<div class="flex flex-col gap-3">
+<h1 class="text-[#0e131b] dark:text-white text-4xl lg:text-5xl font-black leading-tight tracking-tight">
+                        Curated Travel Packages for You
+                    </h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg font-normal max-w-2xl mx-auto">
+                        Explore our hand-picked selection of premium tours designed to create unforgettable memories.
+                    </p>
+</div>
+<!-- Search/Filter Bar -->
+<div class="w-full max-w-4xl mt-4 p-2 bg-white dark:bg-[#1e293b] rounded-xl shadow-lg border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row gap-2">
+<!-- Destination Input -->
+<div class="flex-1 flex items-center px-4 h-12 md:h-14 border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-600">
+<span class="material-symbols-outlined text-slate-400 mr-3">location_on</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-[#0e131b] dark:text-white placeholder-slate-400 text-sm md:text-base font-medium" placeholder="Where do you want to go?" type="text"/>
+</div>
+<!-- Date Input -->
+<div class="flex-1 flex items-center px-4 h-12 md:h-14 border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-600">
+<span class="material-symbols-outlined text-slate-400 mr-3">calendar_month</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-[#0e131b] dark:text-white placeholder-slate-400 text-sm md:text-base font-medium" onfocus="(this.type='date')" placeholder="Check-in Date" type="text"/>
+</div>
+<!-- Guests/Budget Input -->
+<div class="flex-1 flex items-center px-4 h-12 md:h-14">
+<span class="material-symbols-outlined text-slate-400 mr-3">attach_money</span>
+<select class="w-full bg-transparent border-none focus:ring-0 text-[#0e131b] dark:text-white text-sm md:text-base font-medium cursor-pointer">
+<option disabled="" selected="" value="">Max Budget</option>
+<option value="1000">$1,000</option>
+<option value="2000">$2,000</option>
+<option value="5000">$5,000+</option>
+</select>
+</div>
+<button class="h-12 md:h-auto px-8 bg-primary hover:bg-blue-600 text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined md:hidden">search</span>
+<span>Search</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="flex-1 px-6 lg:px-40 py-8 lg:py-12 bg-background-light dark:bg-background-dark">
+<div class="max-w-[1280px] mx-auto flex flex-col gap-8">
+<!-- Filters & Sorting -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div class="flex gap-2 overflow-x-auto pb-2 w-full md:w-auto no-scrollbar">
+<button class="whitespace-nowrap flex h-9 items-center px-4 rounded-full bg-primary text-white text-sm font-medium transition-colors">
+                        All Packages
+                    </button>
+<button class="whitespace-nowrap flex h-9 items-center px-4 rounded-full bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-colors text-sm font-medium">
+                        Europe
+                    </button>
+<button class="whitespace-nowrap flex h-9 items-center px-4 rounded-full bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-colors text-sm font-medium">
+                        Asia
+                    </button>
+<button class="whitespace-nowrap flex h-9 items-center px-4 rounded-full bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-colors text-sm font-medium">
+                        Americas
+                    </button>
+<button class="whitespace-nowrap flex h-9 items-center px-4 rounded-full bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-colors text-sm font-medium">
+                        Adventure
+                    </button>
+</div>
+<div class="flex items-center gap-2 self-end md:self-auto">
+<span class="text-sm text-slate-500 font-medium">Sort by:</span>
+<button class="flex items-center gap-1 text-sm font-bold text-slate-800 dark:text-slate-200">
+                        Recommended
+                        <span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Tour Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 card-hover-effect flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Traditional Japanese temple with red torii gates in Kyoto" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Traditional Japanese temple with red torii gates in Kyoto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ0ixdg9ZBOGLign-Ka5MV3l4-RChxPMF3YI8Ef9uK2yJJoECXYdV5KtosA-cjlAtSm57I0GLFXjRzpJpPxArj0RwO7Nf6LeP2wOdhMSbjVfCMIXiwSpvC8T9TA-wT1YOk9nkhfjCNxgAAGuoRtFPzDr1ksFpksXOJkXc6RHDultLaJpGJsWaFkchN_WiQUkoB2zMxyLL8M54K4lxyeEo1qFoBtFTN4S6bterl-92dBodlmxH2WTBmtBSKwlBGls5ot6af1IluDZbU"/>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-800 dark:text-white uppercase tracking-wider">
+                            Best Seller
+                        </div>
+<button class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Essence of Japan</h3>
+<div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                                4.9
+                            </div>
+</div>
+<div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+                                10 Days
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                                Kyoto, Tokyo
+                            </div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 line-clamp-2">
+                            Experience the perfect blend of ancient tradition and modern life. Visit historic temples, neon-lit streets, and serene gardens.
+                        </p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400">From</span>
+<span class="text-xl font-bold text-primary">$2,400</span>
+</div>
+<button class="px-5 py-2.5 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg transition-all text-sm">
+                                View Details
+                            </button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 card-hover-effect flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="White buildings with blue domes on Santorini cliffside" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="White buildings with blue domes on Santorini cliffside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5fbtxFdnOS9bYfQ_PbS8zTkawCm3UG6Z94K08FQfA6bY6GngEx0EDBuq5E8ZKHsDnvUyCyj3q1XIH9BT4IYFqqRHJp-N3dIYZxg46AR37Vyp93M6TnEzsPSovXMQnFuTNMuo0qsTnbwQouot0XH66xmxzLTbJZZQRdHbGRaptnA6WqYMCHiQ6yF3IwD80Bqn3LWEoSctAfyJbD9PwpHUKQPIrBXO6p8r5h-b1jhQeXfgmFbkniXNdMGsY7bk8L1AEeNTqVHJogI1m"/>
+<div class="absolute top-3 left-3 bg-blue-500/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider">
+                            Popular
+                        </div>
+<button class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Greek Island Hopping</h3>
+<div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                                4.7
+                            </div>
+</div>
+<div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+                                7 Days
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                                Santorini, Mykonos
+                            </div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 line-clamp-2">
+                            Sail through the azure waters of the Aegean Sea. Explore white-washed villages, ancient ruins, and stunning beaches.
+                        </p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400">From</span>
+<span class="text-xl font-bold text-primary">$1,800</span>
+</div>
+<button class="px-5 py-2.5 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg transition-all text-sm">
+                                View Details
+                            </button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 card-hover-effect flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Machu Picchu ruins in Peru with mountains" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Machu Picchu ruins in Peru with mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3MVi4nsd3VtPvdn4kp8LxZBMgJqocOiS9CpRkn3UhjvtJCuQwVGZNmGDGk-VlyC43sKC1FAlBRSn6gJ24Z22ozag49z0BeEp0sjtL1DR_TpsWBJTIFfW_OcH3wszsjRXffOH10LmcAKgjIUgbnObqoIbsXPbr9E3hm6jJb8KShqnKAafDdxwl9mwez_inPR7XJB5jqova69VKdgj8Wtb3xX9VElhc_jIcSeCKdcJiZkfgb8eptcdb2bhK2SPacoNDVusb46nfFiO6"/>
+<div class="absolute top-3 left-3 bg-green-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider">
+                            Adventure
+                        </div>
+<button class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Peruvian Adventure</h3>
+<div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                                4.8
+                            </div>
+</div>
+<div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+                                8 Days
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                                Cusco, Machu Picchu
+                            </div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 line-clamp-2">
+                            Trek through the majestic Andes mountains, explore Incan history, and witness the sunrise over Machu Picchu.
+                        </p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400">From</span>
+<span class="text-xl font-bold text-primary">$1,500</span>
+</div>
+<button class="px-5 py-2.5 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg transition-all text-sm">
+                                View Details
+                            </button>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 card-hover-effect flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Gondolas on a canal in Venice Italy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Gondolas on a canal in Venice Italy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuhZzeC7N7iKUAv1DBCy4j2QsgZ4ev41XlwS8WMTMYyzk9dVoRy50ZJ-6DwK0bb18rXBrn-zQ8T2IXL_Ig5P4PmLA9qf-mDuISxT25SL3wFbdCOTBSmtLE4gcIt9PhMLDqGXAiIcpZ7cpkuunkrdzGJWr4CjEpHqURTly6J7EjjPq_yRnf7qTVt3ThY2ucwLRSUaIPb3avCIgRR153jVtBxfG48WujddWEYDQpt6s9bRSGkZVEHFWdsqFkiE-sRt8URCHmyvsevQgz"/>
+<button class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Italian Escape</h3>
+<div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                                4.6
+                            </div>
+</div>
+<div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+                                9 Days
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                                Rome, Venice
+                            </div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 line-clamp-2">
+                            Immerse yourself in la dolce vita. Visit the Colosseum, ride a gondola in Venice, and taste authentic pasta in Florence.
+                        </p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400">From</span>
+<span class="text-xl font-bold text-primary">$2,100</span>
+</div>
+<button class="px-5 py-2.5 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg transition-all text-sm">
+                                View Details
+                            </button>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 card-hover-effect flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Safari jeep and elephants in Kenya savanna" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Safari jeep and elephants in Kenya savanna" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPBKA5bCtQdC91CAaSCuN86YNENaFEHz3Z6l5h_y3r4qlfg03I7_nklcVBwQ1Pxc16S5pUzCi-nFhDHtSMn_uIwer_Tq3ia3KeQwxc5y1jBJ7i97JzaA-dodtQ-MDdeKKIqGYEwnOHbGh1JHUoxx0ae6BZa0A-pH5QmelOUCVkOmMn65btz3DQQnOU4u9G7-kMPXqE3q0zUE2jo_QTGv2H2UmXpCEknCWlPYjQTZ5ssGNpJsYel7uJ2SBhCvYHgZ9gPb8_LjU_9QfF"/>
+<div class="absolute top-3 left-3 bg-amber-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider">
+                            Luxury
+                        </div>
+<button class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Safari in Kenya</h3>
+<div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                                5.0
+                            </div>
+</div>
+<div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+                                6 Days
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                                Masai Mara
+                            </div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 line-clamp-2">
+                            Witness the Big Five in their natural habitat. Luxury lodges, private game drives, and breathtaking sunsets over the savanna.
+                        </p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400">From</span>
+<span class="text-xl font-bold text-primary">$3,000</span>
+</div>
+<button class="px-5 py-2.5 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg transition-all text-sm">
+                                View Details
+                            </button>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="group bg-white dark:bg-[#1e293b] rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 card-hover-effect flex flex-col">
+<div class="relative h-56 overflow-hidden">
+<img alt="Traditional Balinese temple gate near water" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Traditional Balinese temple gate near water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCZoLrqzaTIQ7Csx-mmu4cP5NiAbUxSTEURDjnioYIthhU8jKeo02yESV-blfzO9iZJSZpo6RBMFsgvFUKY1eFVmGCrfZaigBBua2HNmGYyUwM8igu0WVvRm4qIAA_QQ8ihx6KSMvqnWf-7UWPTxKSlvjSDRX6kZF2VP5NF1kIUeaFrK3mRaQdZ6QS-cs1-9VpK37kcDqWCcuwlhmMEg9iwwsJDOGZk_Eaz2H6y4TfSs7yxq31GdsiNsm7RJ2-zG65KUzjuPdYTZ8o"/>
+<div class="absolute top-3 left-3 bg-teal-500/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider">
+                            Relaxation
+                        </div>
+<button class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Bali Retreat</h3>
+<div class="flex items-center gap-1 text-amber-500 text-sm font-bold">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                                4.8
+                            </div>
+</div>
+<div class="flex items-center gap-4 text-slate-500 dark:text-slate-400 text-sm mb-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+                                7 Days
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                                Ubud, Seminyak
+                            </div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 line-clamp-2">
+                            Relax in the tropical paradise of Indonesia. Yoga sessions, rice terrace walks, and pristine beaches await you.
+                        </p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400">From</span>
+<span class="text-xl font-bold text-primary">$1,200</span>
+</div>
+<button class="px-5 py-2.5 bg-primary/10 hover:bg-primary text-primary hover:text-white font-bold rounded-lg transition-all text-sm">
+                                View Details
+                            </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-8">
+<nav class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-sm shadow-md">
+                        1
+                    </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors text-sm font-medium">
+                        2
+                    </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors text-sm font-medium">
+                        3
+                    </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#111821] border-t border-[#e7ecf3] dark:border-slate-800 py-12 px-6 lg:px-40">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<div class="flex items-center gap-2 text-[#0e131b] dark:text-white">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">travel_explore</span>
+</div>
+<h2 class="text-lg font-bold">Travel Agency</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                    Making your dream vacations a reality. Explore the world with confidence and comfort.
+                </p>
+<div class="flex gap-4 mt-2">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-[#0e131b] dark:text-white font-bold text-sm uppercase tracking-wider">Company</h3>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-primary transition-colors" href="about.html">About Us</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-primary transition-colors" href="#">Careers</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-primary transition-colors" href="#">Blog</a>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-[#0e131b] dark:text-white font-bold text-sm uppercase tracking-wider">Support</h3>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-primary transition-colors" href="#">Help Center</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-[#0e131b] dark:text-white font-bold text-sm uppercase tracking-wider">Contact</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">mail</span>
+                    info@travelagency.com
+                </p>
+<p class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">phone</span>
+                    +1 (555) 123-4567
+                </p>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
+<p class="text-slate-400 text-xs">© 2024 Travel Agency. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
